@@ -42,7 +42,7 @@ csvcut -t -c ingredients_text,product_$
 | csvformat -T \
 | tail -n +2 \
 | tee "$tmp_matches"
-count="$(wc -l < "$tmp_matches" | tr -$
+count="$(wc -l < "$tmp_matches" | tr -d ' ')"
 echo "----"
 echo "Found ${count} product(s) contai$
 
